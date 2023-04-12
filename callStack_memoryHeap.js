@@ -18,9 +18,26 @@ const human = { //allocate memory for human and it's values
 
 //Call Stack
 
+function subtractTwo(num){
+return  num-2
+}
+
 function calculate() {
     const sumTotal = 4+5;
-    return sumTotal
+    return  subtractTwo(sumTotal)
 }
 
 console.log(calculate())
+
+//The call stack stores functions and variables as our code executes 
+//at each entry state of the stack also called the stack frame allows us to know where we are in the code
+//It runs in first in and last out mode
+//when ever a functions is executing it will be in the call stack
+//once it is executed, it will be removed from the call stack
+
+//We use memory heap to point different variables, objects that we store
+//these work in most of the programming languages
+
+//as  javasript engines have different implementations , where varibales are allocated is not 100 same all the time
+//simple varibles can be stored in stack
+//Objects and complex data structures can be stored in memoryheap
