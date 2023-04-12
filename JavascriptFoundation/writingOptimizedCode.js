@@ -30,7 +30,7 @@ console.log(finduser(userData))
 function Animal(x,y){
     this.x = x;
     this.y = y;
-} 
+}
 
 const obj1 = new Animal(1,2)
 const obj2 = new Animal(5,7)
@@ -46,3 +46,10 @@ obj2.a = 45;
 //The key take away from this is we should write predictable code which should
 //be understandable by human as well as machines
 
+//Why not just use machine code from the beginning?
+//If javascript were to be compiled, then either compilation has to be super fast  as javasript gets sent from the server to the browser
+//So the compilation has to happen on the browser or the competing browsers
+//like Chrome , Edge, Firefox has to agree upon some binary executable formats or standard that can understand the code.
+
+//WebAssembly:
+//It has the standard binary executable format , we wont be needing the compilers and interpreters in the future.
