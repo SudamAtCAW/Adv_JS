@@ -63,3 +63,33 @@ const gollum = new Elf('gollum', 'magic', 'My precious')
 const rocket = new Ogre('rocket','AR', 'grey')
 
 
+//Exercise:
+
+class Character {
+    constructor(name, weapon) {
+      this.name = name;
+      this.weapon = weapon;
+    }
+    attack() {
+      return 'atack with ' + this.weapon
+    }
+  }
+  //Polymorphism--
+  //Extend the Character class to have a Queen class. The output of the below code should be:
+
+  class Queen extends Character{
+    constructor(name, weapon, type){
+        super(name, weapon)
+        this.type = type
+    }
+
+    attack(){
+        //this super.attack () method will run the method of super class, where this will point to current calling object. It will have the behaviour defined in the
+        //super class.
+        console.log(super.attack()); 
+      return `I am the ${this.name} of ${this.type}, now bow down to me!`
+    }
+  }
+  const victoria = new Queen('Victoria', 'army', 'hearts'); // create a new instace with the queen having (name, weapon, type). Type inlcudes: 'hearts', 'clubs', 'spades', 'diamonds'
+  
+  victoria.attack() // will console.log the attack() method in Character class AND will return another string: 'I am the Victoria of hearts, now bow down to me! '
